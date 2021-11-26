@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class StatesCensus {
 
-	public void statesCensus() throws FileNotFoundException {
+	public List<List<String>> statesCensus() throws FileNotFoundException {
 		List<List<String>> input = new ArrayList<List<String>>();
 		Scanner userInput = new Scanner(new File("StateNames.csv"));
 		while (userInput.hasNextLine()) {
@@ -19,12 +19,10 @@ public class StatesCensus {
 			}
 			input.add(line);
 		}
-		System.out.println(input);
+		return input;
+
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
-		StatesCensus checkStatesCensus = new StatesCensus();
-		checkStatesCensus.statesCensus();
-
 	}
 }
